@@ -187,7 +187,8 @@ def capture():
             if status == "Completed":
                 try:
                     unique_filename = datetime.now().strftime("%Y%m%d") + "_" + str(random.randint(1000, 9999)) + ".jpg"
-                    predict_folder = os.path.join(DIRECTORY_PATH, '/static/predict')
+                    predict_folder = os.path.join(DIRECTORY_PATH, '/' \
+                    'static/predict')
                     os.makedirs(predict_folder, exist_ok=True)
                     cv2.imwrite(os.path.join(predict_folder, unique_filename), frame)
 
