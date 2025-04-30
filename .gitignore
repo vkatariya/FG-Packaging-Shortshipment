@@ -1,0 +1,7 @@
+venv/
+myvenv/
+.env
+
+static/CaptureImages    
+static/Predict/
+
