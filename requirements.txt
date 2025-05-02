@@ -8,6 +8,9 @@ numpy==1.26.4
 opencv-python>=4.10.0
 ultralytics>=8.0.208
 gunicorn>=20.1.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+pygame>=2.5.2
 
 gitpython>=3.1.30
 matplotlib>=3.3
@@ -26,8 +29,8 @@ tqdm>=4.66.3
 #
 #gunicorn==20.1.0
 pyodbc>=4.0.32  # ODBC driver for SQL Server
-pandas==1.5.3  # Data handling
-openpyxl==3.1.2  # Excel file handling
+#pandas==1.5.3  # Data handling
+#openpyxl==3.1.2  # Excel file handling
 # winsound is a built-in module in Python for Windows
 
 # protobuf<=3.20.1  # https://github.com/ultralytics/yolov5/issues/8012

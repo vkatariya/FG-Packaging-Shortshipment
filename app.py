@@ -8,12 +8,12 @@ import threading
 import time
 import random
 import pandas as pd
-import winsound
 import openpyxl
 import queue
 import signal
 import sys
 import numpy as np
+from subprocess import call
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 #DIRECTORY_PATH = "C:/Users/tv239/Downloads/SHIPMENT/"
@@ -124,6 +124,22 @@ def generate_frames():
         except Exception as e:
             print(f"Frame generation error: {str(e)}")
             time.sleep(0.1)
+
+def play_sound():
+    """Cross-platform sound player"""
+    try:
+        if sys.platform.startswith('win'):
+            # Windows
+            import winsound
+            winsound.Beep(1000, 500)
+        elif sys.platform.startswith('darwin'):
+            # macOS
+            call(['afplay', '/System/Library/Sounds/Ping.aiff'])
+        elif sys.platform.startswith('linux'):
+            # Linux
+            call(['aplay', '-q', '/usr/share/sounds/sound-icons/piano-3.wav'])
+    except Exception as e:
+        print(f"Could not play sound: {e}")
 
 @app.route('/')
 def index():
