@@ -2,12 +2,16 @@
 # Usage: pip install -r requirements.txt
 
 # Base ------------------------------------------------------------------------
+flask==2.2.5
+werkzeug==2.3.8
+numpy==1.26.4
 opencv-python>=4.10.0
 ultralytics>=8.0.208
 gunicorn>=20.1.0
+
 gitpython>=3.1.30
 matplotlib>=3.3
-numpy<2.0
+
 #opencv-python==4.8.1.78
 Pillow==10.0.0
 psutil  # system resources
@@ -19,7 +23,7 @@ torch>=1.8.0  # see https://pytorch.org/get-started/locally (recommended)
 torchvision>=0.9.0
 tqdm>=4.66.3
 #ultralytics==8.0.196  # https://ultralytics.com
-Flask==2.0.1
+#
 #gunicorn==20.1.0
 pyodbc>=4.0.32  # ODBC driver for SQL Server
 pandas==1.5.3  # Data handling
